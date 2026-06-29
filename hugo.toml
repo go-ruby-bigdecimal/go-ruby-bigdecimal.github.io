@@ -1,0 +1,31 @@
+baseURL = "https://go-ruby-bigdecimal.github.io/"
+title = "go-ruby-bigdecimal"
+disableKinds = ["taxonomy", "term", "RSS", "sitemap", "404"]
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[[params.phases]]
+  name = "Arbitrary-precision arithmetic"
+  status = "ready"
+  blurb = "Add, subtract and multiply at unbounded precision, with the sign and scale rules of Ruby's BigDecimal."
+[[params.phases]]
+  name = "Division with precision"
+  status = "ready"
+  blurb = "`div`/`divmod` honouring an explicit precision argument, matching MRI's significant-digit semantics rather than truncating."
+[[params.phases]]
+  name = "Seven rounding modes"
+  status = "ready"
+  blurb = "`ROUND_UP`, `ROUND_DOWN`, `ROUND_HALF_UP`, `ROUND_HALF_DOWN`, `ROUND_HALF_EVEN`, `ROUND_CEILING`, `ROUND_FLOOR`, each matching reference Ruby exactly."
+[[params.phases]]
+  name = "`to_s` \"E\" and \"F\" forms"
+  status = "ready"
+  blurb = "Both the engineering (`\"E\"`) and plain (`\"F\"`) string forms, with MRI's grouping and exponent formatting byte-for-byte."
+[[params.phases]]
+  name = "NaN and infinities"
+  status = "ready"
+  blurb = "`NaN`, `+Infinity` and `-Infinity` produced and propagated with Ruby's comparison and arithmetic rules."
+[[params.phases]]
+  name = "Differential oracle & coverage"
+  status = "ready"
+  blurb = "A wide value corpus exercised here and by the system `ruby`/`bigdecimal`, compared byte-for-byte; 100% coverage, gofmt + go vet clean, green across all six 64-bit Go arches and three OSes."
